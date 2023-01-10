@@ -64,10 +64,10 @@ score = []
 
 for i in range (1,rows-1):
     for j in range (1,cols-1):
-        l_val = check_right(i,j)
-        # print (l_val)
-        r_val = check_left(i,j)
-        # print(r_val) 
+        r_val = check_right(i,j)
+        # print (r_val)
+        l_val = check_left(i,j)
+        # print(l_val) 
         t_val = check_top(i,j)
         # print(t_val)
         b_val = check_bottom(i,j)
