@@ -48,39 +48,30 @@ count = 0
 for i in range (rows):
     for j in range (cols):
 
-        if (i == 0  or i==rows-1):
+        if (i == 0  or i==rows-1 or j==0 or j==cols-1):
             print(i,j, 'boundary value')
             count += 1
-            print('count:', count)                
-            
-        elif (j==0 or j==cols-1):
-            print(i,j, 'boundary value')
-            count += 1
-            print('count:', count) 
+            print('count:', count)             
         
         elif(check_left(i,j)):
             print(i,j, 'visible from left, number is:', int_list[i][j])
             count += 1
             print('count:', count) 
             
-
         elif(check_right(i,j)):
             print(i,j, 'visible from right, number is:', int_list[i][j])
             count += 1
-            print('count:', count) 
-            
+            print('count:', count)             
 
         elif(check_top(i,j)):
             print(i,j, 'visible from top, number is:', int_list[i][j])
             count += 1
-            print('count:', count) 
-            
+            print('count:', count)             
 
         elif(check_bottom(i,j)):
             print(i,j, 'visible from bottom, number is:', int_list[i][j])
             count += 1
-            print('count:', count) 
-            
+            print('count:', count)             
         
         else:
             print(i,j, 'not visible, number is:', int_list[i][j])
