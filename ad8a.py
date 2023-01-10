@@ -44,7 +44,7 @@ def check_bottom(i, j):
     return False
 
 count = 0
-
+score = 0
 for i in range (rows):
     for j in range (cols):
 
