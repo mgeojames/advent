@@ -78,4 +78,4 @@ for i in range (rows):
             print('count:', count) 
 
             
-print('total count', count)
+print('total count:', count)
