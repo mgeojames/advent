@@ -1,21 +1,25 @@
-with open ('input10.txt') as fin:
+with open ('day10a.txt') as fin:
     input = fin.read().split('\n')
 
-X = [1]
+def updatePos ():
+    global pos, strength 
+    pos += 1
+    if pos in (range(20,221,40)):
+        strength += pos * X
+
+X = 1
+pos = 0
+strength = 0
 
 for line in input:
     line = line.split(' ')
     
     if len(line) == 2:
-        X.append(X[len(X)-1])
-        X.append(X[len(X)-1]+int(line[1]))
+        updatePos()
+        updatePos()
+        X += int(line[1])
     else:
-        X.append( X[len(X)-1] )
-    
-    
-strength = 0
-for i in range (20,221,40):
-    strength += i * X[i]
+        updatePos()
 
 print('str = ', strength)
 
