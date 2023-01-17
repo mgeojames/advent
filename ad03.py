@@ -1,4 +1,4 @@
-X = [l.strip()for l in open('input3.txt')]
+X = [l.strip()for l in open('input03.txt')]
 
 #part a
 common = [] #stores the list of common elements

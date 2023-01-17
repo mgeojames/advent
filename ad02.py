@@ -1,4 +1,4 @@
-X = [l.strip() for l in open('input2.txt', 'r')]
+X = [l.strip() for l in open('input02.txt', 'r')]
 score = 0
 for x in X:
     #print('starting score', score)

@@ -1,4 +1,4 @@
-with open("input8.txt") as fin:
+with open("input08.txt") as fin:
     input = fin.read().split() 
 
 

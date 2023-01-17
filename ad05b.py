@@ -10,20 +10,27 @@ S9 = ['R','P','M','L','H']
 stack = [[],S1, S2, S3, S4, S5, S6, S7, S8, S9]
  
 
-with open ('input5.txt') as fin:
+with open ('input05.txt') as fin:
     input_op = fin.readlines()[10:]
 
 print('len(input): ', len(input_op))
 
-    
 for line in input_op:
     split = line.split(' ')
     count, start, stop = map(int, [split[1], split[3], split[5]])
     # print(count, start, stop)
 
+    # print('before: \n from - ', stack[start], '\nto - ', stack[stop])
+    popped = []
     for i in range(count):
-        stack[stop].append(stack[start].pop())        
+        popped.append(stack[start].pop())
+    # print('after popping:', popped)
+    popped = [popped[len(popped)-1-i] for i in range(len(popped))]
+    # print('after reversal:', popped)
     
+    [stack[stop].append(popped[i]) for i in range (len(popped))]
+    # print('after appendinf:', stack[stop])
+
 message = []
 stack.pop(0)
 for element in stack:
@@ -31,4 +38,3 @@ for element in stack:
     # print(element)
 
 print('message:', ''.join(message))
-    

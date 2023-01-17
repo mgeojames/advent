@@ -1,4 +1,4 @@
-with open('input9.txt') as f:
+with open('input09.txt') as f:
     X = f.read().split('\n')
 
 hx, hy = [0, 0]

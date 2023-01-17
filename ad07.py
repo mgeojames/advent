@@ -2,7 +2,7 @@ from collections import defaultdict
 from functools import lru_cache
 from pprint import pprint
 
-with open("input7.txt") as fin:
+with open("input07.txt") as fin:
     blocks = ("\n" + fin.read().strip()).split("\n$ ")[1:]
 
 

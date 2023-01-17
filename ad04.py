@@ -1,4 +1,4 @@
-F = (l.strip() for l in open('input4.txt', 'r'))
+F = (l.strip() for l in open('input04.txt', 'r'))
 
 part1_count = 0
 part2_count = 0
